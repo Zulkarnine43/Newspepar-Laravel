@@ -51,7 +51,7 @@ Route::get('/admin/page',[
     'uses' =>'adminController@admin',
     'as' =>'admin',
    // 'middleware'=>'check_admin_login'
-])->middleware('check_admin_login');
+]);
 
 Route::get('/farmer/Info',[
     'uses' =>'adminController@all_farmers',

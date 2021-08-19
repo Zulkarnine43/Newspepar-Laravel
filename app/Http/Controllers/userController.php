@@ -42,7 +42,7 @@ class userController extends Controller
         $regis->mobile = $request->mobile;
         $regis->email = $request->email;
         $regis->gender = $request->gender;
-        $regis->password =encrypt( $request->password);
+        $regis->password =encrypt($request->password);
         $regis->confirm_password =encrypt($request->confirm_password);
         $regis->save();
 

@@ -58,11 +58,11 @@ class admin_loginController extends Controller
              'confirm_password'=>$request->confirm_password
          ]);*/
 
-        $data=$request->toArray();
-        Mail::send('admin_login.verification_mail',$data,function($message) use ($data){
-            $message->to($data['email']);
-            $message->subject('verification_mail');
-        });
+        // $data=$request->toArray();
+        // Mail::send('admin_login.verification_mail',$data,function($message) use ($data){
+        //     $message->to($data['email']);
+        //     $message->subject('verification_mail');
+        // });
 
         return redirect('/admin/register')->with('verify','Please Verify Your Email Account');
     }
